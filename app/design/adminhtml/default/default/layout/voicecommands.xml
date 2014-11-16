@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+         <reference name="head">
+            <action method="addJs"><script>voice/annyang.min.js</script></action>
+            <action method="addJs"><script>voice/voicecommands.js</script></action>
+        </reference>
+    </default>
+
+    <adminhtml_cache_index>
+        <reference name="before_body_end">
+            <block type="core/template" name="voice_cache" template="voice/cache.phtml" />
+        </reference>    	
+    </adminhtml_cache_index>
+
+    
+</layout>

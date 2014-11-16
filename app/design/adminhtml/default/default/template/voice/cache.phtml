@@ -1,0 +1,25 @@
+<script type="text/javascript">
+if (annyang) {
+	var flushSystemAction = function () {
+		window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/cache/flushSystem"); ?>';
+	}
+	var flushAllAction = function () { 
+		window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/cache/flushAllAction"); ?>';		
+	}
+	var cleanMediaAction = function () { 
+		window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/cache/cleanMediaAction"); ?>';		
+	}
+	var cleanImagesAction = function () { 
+		window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/cache/cleanImagesAction"); ?>';		
+	}
+
+	var cacheCommands = {
+		'flush system' 	: flushSystemAction,
+		'flush all'		: flushAllAction,
+		'clean media'	: cleanMediaAction,
+		'clean images'	: cleanImagesAction,
+	};
+
+	annyang.addCommands(cacheCommands);
+}	
+</script>

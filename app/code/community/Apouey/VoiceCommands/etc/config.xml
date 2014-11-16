@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Apouey
+ * @package     Apouey_VoiceCommands
+ * @copyright   apouey.github.io
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Apouey_VoiceCommands>
+            <version>0.0.1</version>
+        </Apouey_VoiceCommands>
+    </modules>
+    <global>
+        <helpers>
+            <voice>
+                <class>Apouey_Voice_Helper</class>
+            </voice>
+        </helpers>
+    </global>    
+    <adminhtml>
+        <routers>
+            <voice>
+                <use>standard</use>
+                <args>
+                    <module>Apouey_VoiceCommands</module>
+                    <frontName>voice</frontName>
+                </args>
+            </voice>
+        </routers>
+        <translate>
+            <modules>
+                <Apouey_VoiceCommands>
+                    <files>
+                        <default>Apouey_VoiceCommands.csv</default>
+                    </files>
+                </Apouey_VoiceCommands>
+            </modules>
+        </translate>        
+        <layout>
+            <updates>
+                <apouey_voicecommands>
+                    <file>voicecommands.xml</file>
+                </apouey_voicecommands>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
