@@ -13,9 +13,9 @@ if (annyang) {
 	}
 
 	var globalCommands = {
-		'cache'	: goToCache,
-		'configuration' : goToConfiguration,
-		'index' : goToProcess,	
+		'<?php echo Mage::helper('voice')->__('cache'); ?>'	: goToCache,
+		'<?php echo Mage::helper('voice')->__('configuration'); ?>' : goToConfiguration,
+		'<?php echo Mage::helper('voice')->__('index'); ?>' : goToProcess,	
 	};
 
 	annyang.addCommands(globalCommands);

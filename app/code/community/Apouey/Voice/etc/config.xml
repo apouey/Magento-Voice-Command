@@ -14,16 +14,16 @@
  * to license@magentocommerce.com so we can send you a copy immediately.
  *
  * @category    Apouey
- * @package     Apouey_VoiceCommands
+ * @package     Apouey_Voice
  * @copyright   apouey.github.io
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
 <config>
     <modules>
-        <Apouey_VoiceCommands>
+        <Apouey_Voice>
             <version>0.0.1</version>
-        </Apouey_VoiceCommands>
+        </Apouey_Voice>
     </modules>
     <global>
         <helpers>
@@ -37,25 +37,25 @@
             <voice>
                 <use>standard</use>
                 <args>
-                    <module>Apouey_VoiceCommands</module>
+                    <module>Apouey_Voice</module>
                     <frontName>voice</frontName>
                 </args>
             </voice>
         </routers>
         <translate>
             <modules>
-                <Apouey_VoiceCommands>
+                <Apouey_Voice>
                     <files>
-                        <default>Apouey_VoiceCommands.csv</default>
+                        <default>Apouey_Voice.csv</default>
                     </files>
-                </Apouey_VoiceCommands>
+                </Apouey_Voice>
             </modules>
         </translate>        
         <layout>
             <updates>
-                <apouey_voicecommands>
-                    <file>voicecommands.xml</file>
-                </apouey_voicecommands>
+                <apouey_voice>
+                    <file>voice.xml</file>
+                </apouey_voice>
             </updates>
         </layout>
     </adminhtml>

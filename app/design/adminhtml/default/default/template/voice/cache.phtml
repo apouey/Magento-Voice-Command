@@ -14,10 +14,10 @@ if (annyang) {
 	}
 
 	var cacheCommands = {
-		'flush system' 	: flushSystemAction,
-		'flush all'		: flushAllAction,
-		'clean media'	: cleanMediaAction,
-		'clean images'	: cleanImagesAction,
+		'<?php echo Mage::helper('voice')->__('flush system'); ?>' 	: flushSystemAction,
+		'<?php echo Mage::helper('voice')->__('flush all'); ?>'		: flushAllAction,
+		'<?php echo Mage::helper('voice')->__('clean media'); ?>'	: cleanMediaAction,
+		'<?php echo Mage::helper('voice')->__('clean images'); ?>'	: cleanImagesAction,
 	};
 
 	annyang.addCommands(cacheCommands);

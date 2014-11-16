@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Apouey_Voice>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Apouey_Voice>
+    </modules>
+</config>
