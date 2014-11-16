@@ -14,7 +14,7 @@ if (annyang) {
 	var goToCreditmemo = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/sales_creditmemo/index"); ?>'; }
 	var goToCatalogPriceRules = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/promo_catalog/index"); ?>'; }
 	var goToShoppingCartPriceRules = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/promo_quote/index"); ?>'; }
-	
+
 	var globalCommands = {
 		'<?php echo Mage::helper('voice')->__('dashboard'); ?>'	: goToDashboard,
 		'<?php echo Mage::helper('voice')->__('cache'); ?>'	: goToCache,
