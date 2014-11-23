@@ -32,7 +32,7 @@ if (annyang) {
 	};
 
 	annyang.addCommands(globalCommands);
-	annyang.setLanguage('en-US');
+	annyang.setLanguage('<?php echo Mage::app()->getLocale()->getLocaleCode(); ?>');
 	annyang.debug(true);
 	annyang.start();
 }	
