@@ -1,34 +1,22 @@
 <script type="text/javascript">
 if (annyang) {
-	
-	var goToDashboard = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/dashboard/index"); ?>'; }
-	var goToCache = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/cache/index"); ?>'; }
-	var goToConfiguration = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/system_config/index"); ?>'; }
-	var goToProcess = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/process/list"); ?>'; }
-	var goToProduct = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/catalog_product/index"); ?>'; }
-	var goToCategory = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/catalog_category/index"); ?>'; }
- 	var goToCustomer = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/customer/index"); ?>'; }
-	var goToOrder = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/sales_order/index"); ?>'; }
-	var goToInvoice = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/sales_invoice/index"); ?>'; }
-	var goToShipment = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/sales_shipment/index"); ?>'; }
-	var goToCreditmemo = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/sales_creditmemo/index"); ?>'; }
-	var goToCatalogPriceRules = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/promo_catalog/index"); ?>'; }
-	var goToShoppingCartPriceRules = function () { window.location.href = '<?php echo Mage::helper("adminhtml")->getUrl("adminhtml/promo_quote/index"); ?>'; }
 
+	var url = <?php echo json_encode($this->getUrl()); ?>;
+	var r = function(u){ window.location.href = u; }
 	var globalCommands = {
-		'<?php echo Mage::helper('voice')->__('dashboard'); ?>'	: goToDashboard,
-		'<?php echo Mage::helper('voice')->__('cache'); ?>'	: goToCache,
-		'<?php echo Mage::helper('voice')->__('configuration'); ?>' : goToConfiguration,
-		'<?php echo Mage::helper('voice')->__('index'); ?>' : goToProcess,	
-		'<?php echo Mage::helper('voice')->__('product'); ?>' : goToProduct,
-		'<?php echo Mage::helper('voice')->__('customer'); ?>' : goToCustomer,
-		'<?php echo Mage::helper('voice')->__('category'); ?>' : goToCategory,
-		'<?php echo Mage::helper('voice')->__('order'); ?>' : goToOrder,
-		'<?php echo Mage::helper('voice')->__('invoice'); ?>' : goToInvoice,
-		'<?php echo Mage::helper('voice')->__('shipment'); ?>' : goToShipment,
-		'<?php echo Mage::helper('voice')->__('creditmemo'); ?>' : goToCreditmemo,
-		'<?php echo Mage::helper('voice')->__('catalog rules'); ?>' : goToCatalogPriceRules,
-		'<?php echo Mage::helper('voice')->__('cart rules'); ?>' : goToShoppingCartPriceRules,
+		'<?php echo Mage::helper('voice')->__('dashboard'); ?>'		: function () { r(url['goToDashboard']); },
+		'<?php echo Mage::helper('voice')->__('cache'); ?>'			: function () { r(url['goToCache']); },
+		'<?php echo Mage::helper('voice')->__('configuration'); ?>' : function () { r(url['goToConfiguration']); },
+		'<?php echo Mage::helper('voice')->__('index'); ?>' 		: function () { r(url['goToProcess']); },	
+		'<?php echo Mage::helper('voice')->__('product'); ?>' 		: function () { r(url['goToProduct']); },
+		'<?php echo Mage::helper('voice')->__('customer'); ?>' 		: function () { r(url['goToCustomer']); },
+		'<?php echo Mage::helper('voice')->__('category'); ?>' 		: function () { r(url['goToCategory']); },
+		'<?php echo Mage::helper('voice')->__('order'); ?>' 		: function () { r(url['goToOrder']); },
+		'<?php echo Mage::helper('voice')->__('invoice'); ?>' 		: function () { r(url['goToInvoice']); },
+		'<?php echo Mage::helper('voice')->__('shipment'); ?>' 		: function () { r(url['goToShipment']); },
+		'<?php echo Mage::helper('voice')->__('creditmemo'); ?>' 	: function () { r(url['goToCreditmemo']); },
+		'<?php echo Mage::helper('voice')->__('catalog rules'); ?>' : function () { r(url['goToCatalogPriceRules']); },
+		'<?php echo Mage::helper('voice')->__('cart rules'); ?>' 	: function () { r(url['goToShoppingCartPriceRules']); },
 	};
 
 	annyang.addCommands(globalCommands);
