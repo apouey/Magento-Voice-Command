@@ -5,13 +5,13 @@
             <action method="addJs"><script>voice/annyang.min.js</script></action>
         </reference>  
          <reference name="before_body_end">
-            <block type="core/template" name="voice_global" template="voice/global.phtml" />
+            <block type="voice/adminhtml_global" name="voice_global" />
         </reference> 
     </default>
 
     <adminhtml_cache_index>
         <reference name="before_body_end">
-            <block type="core/template" name="voice_cache" template="voice/cache.phtml" />
+            <block type="adminhtml/template" name="voice_cache" template="voice/cache.phtml" />
         </reference>        
     </adminhtml_cache_index>
 </layout>

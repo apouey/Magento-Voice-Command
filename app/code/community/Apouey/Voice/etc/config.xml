@@ -26,6 +26,11 @@
         </Apouey_Voice>
     </modules>
     <global>
+        <blocks>
+            <voice>
+                <class>Apouey_Voice_Block</class>
+            </voice>
+        </blocks>        
         <helpers>
             <voice>
                 <class>Apouey_Voice_Helper</class>

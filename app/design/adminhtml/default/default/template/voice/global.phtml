@@ -32,8 +32,8 @@ if (annyang) {
 	};
 
 	annyang.addCommands(globalCommands);
-	annyang.setLanguage('<?php echo Mage::app()->getLocale()->getLocaleCode(); ?>');
-	annyang.debug(true);
+	annyang.setLanguage('<?php echo $this->getAdminLocale(); ?>');
+	annyang.debug(<?php echo $this->getDebugFlag(); ?>);
 	annyang.start();
 }	
 </script>
