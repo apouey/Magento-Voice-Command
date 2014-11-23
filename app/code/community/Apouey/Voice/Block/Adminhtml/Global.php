@@ -15,7 +15,7 @@ class Apouey_Voice_Block_Adminhtml_Global extends Mage_Adminhtml_Block_Template
 
 	protected function getDebugFlag()
 	{
-		return Mage::getStoreConfig('voice/debug') ? 'true' : 'false';
+		return Mage::getStoreConfig('voice/global/debug') ? 'true' : 'false';
 	}
 
 	public function getUrl()
