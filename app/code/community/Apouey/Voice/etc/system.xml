@@ -14,10 +14,41 @@
  * to license@magentocommerce.com so we can send you a copy immediately.
  *
  * @category    Apouey
- * @package     Apouey_VoiceCommands
+ * @package     Apouey_Voice
  * @copyright   apouey.github.io
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
 <config>
+  <sections>
+    <voice translate="label">
+      <label>Voice</label>
+      <tab>general</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>10000</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <groups>
+        <global translate="label">
+            <label>Global</label>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <sort_order>100</sort_order>
+            <fields>
+                <enabled translate="label">
+                    <label>Allow Magento Voice</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </enabled>
+            </fields>
+        </global>
+      </groups>
+    </voice>
+  </sections>
 </config>
